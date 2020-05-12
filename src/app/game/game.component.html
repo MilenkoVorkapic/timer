@@ -1,0 +1,9 @@
+<div class="container">
+  <h2>{{ (timer$ | async) / 1000 }} seconds left!</h2>
+  <h3>Number of good answers : {{ numberOfGoodAnswers }}</h3>
+  <h3>Math Question:</h3>
+  <span>{{ number1 }} {{ signMapping[sign] }} {{ number2 }} = </span>
+  <input [(ngModel)]="value" (keydown.enter)="checkValue()" />
+  <span *ngIf="error">{{ error }}</span>
+  <button (click)="checkValue()">Check!</button>
+</div>

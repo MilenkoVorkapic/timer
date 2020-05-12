@@ -1,0 +1,8 @@
+<div class="container">
+  <h2>Hello!</h2>
+  <label for="input-name">Please enter your name to start the game:</label>
+  <input id="input-name" [(ngModel)]="name" (keydown.enter)="enterGame()" />
+  <button (click)="enterGame()" [disabled]="!name">
+    Go!
+  </button>
+</div>
